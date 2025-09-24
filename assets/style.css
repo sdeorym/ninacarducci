@@ -1,3 +1,6 @@
+#header {
+	display: none;
+}
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -17,31 +20,25 @@ body {
 	padding-block: 30px;
 	align-items: center;
 }
-
-.top-header .name {
+.top-header h1 {
 	font-size: 26px;
 }
-
 .nav ul {
 	display: flex;
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
 }
-
 .nav li {
 	padding-inline: 10px;
 }
-
 .nav a {
 	text-decoration: none;
 	color: #000
 }
-
 .social-link img {
 	width: 20px;
 }
-
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -72,30 +69,36 @@ body {
 
 }
 #about-me {
-	flex: 2
+	flex: 2;
 }
-.about-me__title {
-	margin-top: 1em;
-	margin-bottom: 60px;
+#about-me h2 {
+	text-align: left;
 	font-size: 30px;
 }
-.about-me__introduction {
+#about-me .introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
 	width: 60%;
+	font-size: 16px;
+	margin: 0px 0px 8px;
 }
 #about-me p {
 	width: 80%;
 	font-size: 14px;
-}
+	margin: 0px 0px 16px;
 
-#gallery {
-	/*	min-height: 100vh; */
 }
-.title{
+/*#gallery {
+		min-height: 100vh; 
+}*/
+h2 {
 	text-align: center;
 	padding-block: 2em;
+	margin-top: 0;
+    margin-bottom: 0.5rem;
+	font-weight: 500;
+    line-height: 1.2;
 }
 .gallery .nav {
 	justify-content: center;
@@ -135,22 +138,19 @@ body {
 	display: flex;
 	font-size: 24px;
 }
-
-.quote {
-	font-family: 'Spectral';
-	font-style: italic;
+.quote {	
 	width: 70%;
 	margin: auto;
 	padding-block: 3em;
 }
-.quote__text {
-	font-family: Spectral;
+.quote blockquote {
+	font-family: 'Spectral';
 	font-style: italic;
 	font-weight: 300;
-
+	font-size: 37px;
 }
-.quote__author {
-	font-family: Spectral;
+.quote figcaption {
+	font-family: 'Spectral';
 	font-weight: 800;
 	font-size: 22px;
 }
@@ -190,6 +190,7 @@ body {
 	z-index: 1;
 }
 
+
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
@@ -213,7 +214,9 @@ body {
 }
 .form-container {
 	flex : 2;
-
+}
+.form-container h2 {
+	text-align: left;
 }
 form {
 	display: flex;
@@ -283,17 +286,28 @@ input[type="submit"] {
 	}
 	#services .container {
 		flex-direction: column;
+		width: 100%;
+		max-width: 1440px;	
 	}
 	.service {
-		width: 100%;
-		max-width: 100%;
+		width: 27%;
+		max-width: 1320px;
 		height: auto;
-		margin: 2em 0
+		margin: 2em;
+		padding: 16px;
 	}
 	.service__description{
 		margin-bottom: 1em;
 	}
-
+	.service p {
+		font-size: 16px;
+	}
+	.service h3 {
+		font-size: 23px;
+	}
+	.service h4 {
+		font-size: 24px;
+	}
 	#services .container::before{
 		width: 30%;
 		height: 100%;
