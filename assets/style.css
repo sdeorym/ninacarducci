@@ -6,13 +6,30 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
+h1, h2, h3, h4 {
+	font-weight: 500;
+}
+h1 {
+	font-size: 26px;	
+}
 h2 {
 	text-align: center;
 	padding-block: 2em;
 	margin-top: 0;
     margin-bottom: 0.5rem;
-	font-weight: 500;
     line-height: 1.2;
+	font-size: 30px;
+}
+h3 {
+	margin: 0em;
+	font-size: 35px;
+}
+h4 {
+	margin-bottom: 0em;
+	font-size: 30px;
+}
+p {	
+	font-size: 14px;
 }
 
 /***** NAV *****/
@@ -28,9 +45,6 @@ nav {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-}
-h1 {
-	font-size: 26px;
 }
 nav ul {
 	height: 21.38px;
@@ -55,8 +69,8 @@ nav ul li a {
 	box-sizing: border-box;
 	display: none;
 }
+
 /***** ABOUT *****/
-/*it used to have the id #about, in case it's needed for JS*/
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -87,7 +101,6 @@ nav ul li a {
 }
 #about-text h2 {
 	text-align: left;
-	font-size: 30px;
 	padding: 0px;
 	margin: 30px 0px 60px;
 }
@@ -101,7 +114,6 @@ nav ul li a {
 }
 #about-text p {
 	width: 80%;
-	font-size: 14px;
 	margin: 0 0 16px 0;
 }
 /*#gallery {
@@ -146,6 +158,8 @@ nav ul li a {
 	display: flex;
 	font-size: 24px;
 }
+
+/***** QUOTES *****/
 .quote {	
 	width: 78.34%;
 	margin: auto;
@@ -163,6 +177,8 @@ nav ul li a {
 	font-size: 22px;
 	margin-left: 40px;
 }
+
+/***** SERVICES *****/
 #services {
 	margin: auto;
 	background-color: #A8D5D8 ;
@@ -180,8 +196,10 @@ nav ul li a {
 }
 #services .container {
 	justify-content: space-between;
+	max-width: 69%;
 	display: flex;
-	padding : 2em 0;
+	padding : 2em 15.5%;
+	gap: 4%;
 }
 .service {
 	background-color: white;
@@ -194,6 +212,12 @@ nav ul li a {
 	justify-content: space-between;
 	z-index: 1;
 }
+.service__price {
+	gap: 0px;
+	margin: 0px;
+}
+
+/***** CONTACT *****/
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
@@ -218,7 +242,12 @@ nav ul li a {
 	flex : 2;
 }
 .form-container h2 {
+	margin-top: 0px;
 	text-align: left;
+}
+.form-container p, .form-container label {
+	font-family: 'Inter';
+	font-size: 14px;
 }
 form {
 	display: flex;
@@ -246,6 +275,8 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
+
+/*** MEDIA QUERIES ***/
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
