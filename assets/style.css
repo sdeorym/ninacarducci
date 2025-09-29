@@ -1,6 +1,3 @@
-#header {
-	display: none;
-}
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -9,36 +6,57 @@ body {
 	font-family: 'Inter';
 	font-style: normal;
 }
-.top-header {
+h2 {
+	text-align: center;
+	padding-block: 2em;
+	margin-top: 0;
+    margin-bottom: 0.5rem;
+	font-weight: 500;
+    line-height: 1.2;
+}
+
+/***** NAV *****/
+nav {
+	height: 99px;
+	box-sizing: border-box;
+	padding-inline: 100px;
+	padding-block: 30px;
 	background-color: white;
 	position: sticky;
 	top:0;
 	z-index: 1000;
 	display: flex;
 	justify-content: space-between;
-	padding-inline: 100px;
-	padding-block: 30px;
 	align-items: center;
 }
-.top-header h1 {
+h1 {
 	font-size: 26px;
 }
-.nav ul {
+nav ul {
+	height: 21.38px;
 	display: flex;
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
+	padding-left: 32px;
 }
-.nav li {
+nav ul li {
 	padding-inline: 10px;
 }
-.nav a {
+nav ul li a {
 	text-decoration: none;
 	color: #000
 }
 .social-link img {
 	width: 20px;
 }
+#header {
+	height: 666px;
+	box-sizing: border-box;
+	display: none;
+}
+/***** ABOUT *****/
+/*it used to have the id #about, in case it's needed for JS*/
 #about {
 	display: flex;
 	background-color: #F6D2B8;
@@ -46,7 +64,6 @@ body {
 	padding-block: 100px;
 	position: relative;
 }
-
 .picture.left::before {
 	content: ' ';
 	background-color: #E5975F;
@@ -57,49 +74,40 @@ body {
 	left: 0;
 	z-index: -1;
 }
-
 .picture {
 	flex: 1;
 	margin: 0 20px;
 	z-index: 0;
 }
-
 .picture img {
-	width: 100%;
-
+	max-width: 100%;
 }
-#about-me {
+#about-text {
 	flex: 2;
 }
-#about-me h2 {
+#about-text h2 {
 	text-align: left;
 	font-size: 30px;
+	padding: 0px;
+	margin: 30px 0px 60px;
 }
-#about-me .introduction {
+.introduction {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-style: italic;
-	width: 60%;
+	max-width: 60%;
 	font-size: 16px;
-	margin: 0px 0px 8px;
+	margin: 0 0 8px 0;
 }
-#about-me p {
+#about-text p {
 	width: 80%;
 	font-size: 14px;
-	margin: 0px 0px 16px;
-
+	margin: 0 0 16px 0;
 }
 /*#gallery {
 		min-height: 100vh; 
 }*/
-h2 {
-	text-align: center;
-	padding-block: 2em;
-	margin-top: 0;
-    margin-bottom: 0.5rem;
-	font-weight: 500;
-    line-height: 1.2;
-}
+
 .gallery .nav {
 	justify-content: center;
 }
@@ -139,22 +147,22 @@ h2 {
 	font-size: 24px;
 }
 .quote {	
-	width: 70%;
+	width: 78.34%;
 	margin: auto;
-	padding-block: 3em;
+	padding-block: 3em;	
 }
 .quote blockquote {
-	font-family: 'Spectral';
+	font-family: 'Spectral';	
 	font-style: italic;
 	font-weight: 300;
-	font-size: 37px;
+	font-size: 40px;
 }
 .quote figcaption {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-size: 22px;
+	margin-left: 40px;
 }
-
 #services {
 	margin: auto;
 	background-color: #A8D5D8 ;
@@ -170,14 +178,11 @@ h2 {
 	left: 0;
 	z-index: 0;
 }
-
 #services .container {
 	justify-content: space-between;
 	display: flex;
 	padding : 2em 0;
-
 }
-
 .service {
 	background-color: white;
 	max-width: 390px;
@@ -189,8 +194,6 @@ h2 {
 	justify-content: space-between;
 	z-index: 1;
 }
-
-
 #contact {
 	margin: auto;
 	background-color: #D8D3A8 ;
@@ -198,7 +201,6 @@ h2 {
 	padding-inline: 100px;
 	padding-block: 100px;
 }
-
 #contact .container {
 	display: flex;
 }
@@ -224,7 +226,6 @@ form {
 	width: 70%;
 	align-items: flex-start;
 }
-
 form input {
 	width: 100%;
 	background-color: transparent;
@@ -232,7 +233,6 @@ form input {
 	height: 2.5em;
 	margin-bottom: 20px;
 }
-
 form textarea {
 	width: 100%;
 	background-color: transparent;
@@ -246,7 +246,6 @@ input[type="submit"] {
 	background-color: #BEB45A;
 	padding: .5em 1em
 }
-
 @media all and (max-width: 1180px) {
 	.picture {
 		flex : 2;
@@ -254,11 +253,11 @@ input[type="submit"] {
 	#about, #contact .container {
 		align-items: center;
 	}
-	.about-me__title {
+	#about-text h2 {
 		margin-top: 0;
 		margin-bottom: 1em;
 	}
-	#about-me h6, #about-me p {
+	.introduction, #bout-text p {
 		width: 100%;
 	}
 }
@@ -280,7 +279,7 @@ input[type="submit"] {
 		left: 0;
 		z-index: -1;
 	}
-	.about-me__title{
+	#about-text h2 {
 		text-align: center;
 		margin-top: 1em;
 	}
