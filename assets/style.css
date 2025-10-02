@@ -193,6 +193,8 @@ nav ul li a {
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-column-gap: 20px;
 	grid-row-gap: 20px;
+	max-width: 67.5%;
+	margin: 0 auto;
 }
 .gallery-item {
 	aspect-ratio: 1 / 1;
