@@ -1,8 +1,3 @@
-/* THINGS TO DO:
-    1. CREATE A FILTER SYSTEM THAT IS SHOWN WHEN THE PAGE IS LOADED
-    2. USE THE FILTERS TO SHOW DIFFERENT PHOTOS (ACCORDING TO LABEL) OR ALL EXISTING PHOTOS.
-*/
-
 document.addEventListener("DOMContentLoaded", () => {
 
     let photoCategories = [];
@@ -44,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
         };        
     }
 
-    function buttonCalling() {
+    function buttonCalling() { //By this function we choose any option in the gallery menu.
         buttonry();
 
         let buttonClick = document.querySelectorAll("#gallery .gallery-filters .galleryButton");
@@ -55,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 buttonClick.forEach((button) => button.classList.remove("active"));
                 button.classList.add("active");
                 choice = button.getAttribute('data-images-toggle');
-                console.log(choice);
                 let allPhotos = document.querySelectorAll(".gallery-item");
                 let selectedPhotos;
                 allPhotos.forEach(photo => {photo.style.display = "none";});
