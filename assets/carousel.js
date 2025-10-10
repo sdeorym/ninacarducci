@@ -2,6 +2,7 @@
     2. WE GOTTA AUTHOMATISE THE ADVANCING OF CAROUSEL. TEMP FUNCTION?
 */
 document.addEventListener("DOMContentLoaded", () => {
+    //automaticCarousel();
     let selectedButton, currentPhoto, currentButton, selectedPhoto;
     let carouselButton = document.querySelectorAll('.bannerCursor');
     const arrows = document.querySelectorAll('[aria-controls="carousel-viewport"]');
@@ -35,16 +36,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     
     function leftButton(slideIndex) {
-        if (slideIndex === 0) {
+        if (slideIndex == 0) {
             slideIndex = 2;
         } else {
             slideIndex--;
         }
-        console.log(slideIndex);
         carouselSelector(slideIndex);
     }
     function rightButton(slideIndex) {
-        if (slideIndex === 2) {
+        if (slideIndex == 2) {
             slideIndex = 0;
         } else {
             slideIndex++;
