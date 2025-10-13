@@ -1,11 +1,10 @@
-/* THINGS TO DO:
-    2. WE GOTTA AUTHOMATISE THE ADVANCING OF CAROUSEL. TEMP FUNCTION?
-*/
 document.addEventListener("DOMContentLoaded", () => {
-    //automaticCarousel();
     let selectedButton, currentPhoto, currentButton, selectedPhoto;
     let carouselButton = document.querySelectorAll('.bannerCursor');
     const arrows = document.querySelectorAll('[aria-controls="carousel-viewport"]');
+    const totalSlides = document.querySelectorAll('.carousel-image').length;
+    
+    setInterval (autoAdvance, 4500);
 
     carouselButton.forEach((button) => {
         button.addEventListener("click", () => {
@@ -20,10 +19,10 @@ document.addEventListener("DOMContentLoaded", () => {
             currentPhoto = document.querySelector(".carousel-image.current");
             selectedPhoto = parseInt(currentPhoto.getAttribute(`data-slide-index`));
             classRemover();
-            if (button.className = ".prev-arrow-button") {
+            if (button.className === "prev-arrow-button") {
                 console.log(selectedPhoto);
                 leftButton(selectedPhoto);}
-            else if (button.className = ".next-arrow-button") {
+            else if (button.className === "next-arrow-button") {
                 console.log(selectedPhoto);
                 rightButton(selectedPhoto);}            
         });
@@ -51,7 +50,6 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         carouselSelector(slideIndex);
     }
-
     function classRemover() {
         currentPhoto = document.querySelector(".carousel-image.current");
         currentButton = document.querySelector('.bannerCursor[aria-current="true"]');
@@ -59,10 +57,17 @@ document.addEventListener("DOMContentLoaded", () => {
         currentButton.removeAttribute('aria-current');
         currentButton.classList.remove("current");
     }
-
     function classAdder(selectedPhoto, selectedButton) {
         selectedPhoto.classList.add("current");
-        selectedButton.setAttribute('aria-current', 'true');
-        selectedButton.classList.add("current"); 
+        selectedButton.classList.add("current");
+        selectedButton.setAttribute('aria-current', 'true');         
+    }
+
+    function autoAdvance() {
+        slideIndex = parseInt((document.querySelector(".carousel-image.current")).getAttribute(`data-slide-index`));
+        classRemover();
+        slideIndex++;
+        if (slideIndex >= totalSlides) {slideIndex =0};
+        carouselSelector(slideIndex);
     }
 });

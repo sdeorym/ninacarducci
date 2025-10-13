@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
         container.classList.add("gallery-filters");
         let galleryList = document.createElement("ul");
         container.appendChild(galleryList);
+        galleryList.classList.add("gallery-filters-list");
         for (i=0; i < photoCategories.length; i++) {
             let galleryListElement = document.createElement("li");
             let galleryButtons = document.createElement("button");

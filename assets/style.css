@@ -54,7 +54,7 @@ nav ul {
 	list-style-type: none;
 	font-size: 14px;
 	margin-bottom: 0;
-	padding-left: 32px;
+	padding-left: 32px;	
 }
 nav ul li {
 	padding-inline: 10px;
@@ -73,89 +73,90 @@ nav ul li a {
 	max-width: 100%;
 	box-sizing: border-box;
 }
-.arrow-buttons button:hover, .carousel-cursors button:hover {
+.bannerCursor:hover, .prev-arrow-button:hover, .next-arrow-button:hover {
 	opacity: 1;
 }
-/* CAROUSEL CURSOR LINES */
-.carousel-cursors {
-	position: absolute;
-	bottom: 5rem;
-	right: 0;
- 	left: 0;
-  	z-index: 2;
-  	display: flex;
-  	justify-content: center;
-  	padding: 0;
-  	list-style: none;
-}
-.carousel-cursors button {
-	width: 30px;
-  	height: 3px;
-  	margin: 0 3px;
-  	background-color: #fff;
-  	opacity: 0.5;
-	cursor: pointer;
-	transition: opacity 0.6s ease;
-	pointer-events: auto;
-}
-.carousel-cursors .current {
-  opacity: 1;
-}
-/* CAROUSEL IMAGES */
-.carousel-viewport {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	width: 100%;
-	height: auto;
-	overflow: hidden;
-}
-.carousel-image {
-	max-width: 1920px;
-	flex: 0 0 auto;
-	display: none;
-	transition: opacity 0.6s ease-in-out;
-}
-.carousel-image img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-	margin:auto;
-}
-.carousel-image.current {
-	display: block;
-}
-/* CAROUSEL ARROW BUTTONS*/
-.arrow-buttons {
-	position: absolute;
- 	top: 50%;
-	left: 0;
-	right: 0;
-	transform: translateY(-50%);
-	display: flex;
-	justify-content: space-between;
-	padding: 0 1rem;
-	pointer-events: none;
-}
-.arrow-buttons button {
-	pointer-events: auto;
-	border: none;
-	background: transparent;
-	color: #FFF;
-	opacity: 0.5;
-}
-.visually-hidden {
-	position: absolute;
-	width: 1px;
-	height: 1px;
-	padding: 0;
-	margin: -1px;
-	overflow: hidden;
-	clip: rect(0, 0, 0, 0);
-	white-space: nowrap;
-	border: 0;
-}
+	/* CAROUSEL CURSOR LINES */
+	.carousel-cursors {
+		position: absolute;
+		bottom: 5rem;
+		right: 0;
+		left: 0;
+		z-index: 2;
+		display: flex;
+		justify-content: center;
+		padding: 0;
+		list-style: none;
+	}
+	.bannerCursor {
+		width: 30px;
+		height: 5px;
+		margin: 0 3px;
+		background-color: #1C6474;
+		opacity: 0.5;
+		cursor: pointer;
+		transition: opacity 0.3s ease;
+		pointer-events: auto;
+		border: none;
+	}
+	.bannerCursor.current {
+		opacity: 1;
+	}
+	/* CAROUSEL IMAGES */
+	.carousel-viewport {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		width: 100%;
+		height: auto;
+		overflow: hidden;
+	}
+	.carousel-image {
+		max-width: 1920px;
+		flex: 0 0 auto;
+		display: none;
+		transition: opacity 0.6s ease-in-out;
+	}
+	.carousel-image img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+		margin:auto;
+	}
+	.carousel-image.current {
+		display: block;
+	}
+	/* CAROUSEL ARROW BUTTONS*/
+	.arrow-buttons {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
+		display: flex;
+		justify-content: space-between;
+		padding: 0 1rem;
+		pointer-events: none;
+	}
+	.prev-arrow-button, .next-arrow-button {
+		pointer-events: auto;
+		border: none;
+		background: transparent;
+		color: #1C6474;
+		opacity: 0.5;
+	}
+	.visually-hidden {
+		position: absolute;
+		width: 1px;
+		height: 1px;
+		padding: 0;
+		margin: -1px;
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		white-space: nowrap;
+		border: 0;
+	}
 
 /***** ABOUT *****/
 #about {
@@ -180,7 +181,7 @@ nav ul li a {
 	margin: 0 20px;
 	z-index: 0;
 }
-.picture img {
+.self-portrait {
 	width: 100%;
   	height: auto;
   	max-width: 573px; 
@@ -188,7 +189,7 @@ nav ul li a {
 #about-text {
 	flex: 2;
 }
-#about-text h2 {
+.about-title {
 	text-align: left;
 	padding: 0px;
 	margin: 30px 0px 60px;
@@ -206,7 +207,7 @@ nav ul li a {
 	margin: 0 0 16px 0;
 }
 
-/***** PORTFOLIO *****/
+/***** PORTFOLIO-GALLERY *****/
 .gallery {
 	justify-content: center;
 	display: grid;
@@ -223,7 +224,7 @@ nav ul li a {
 	object-fit: cover;
 	padding: .5em;
 }
-.gallery-filters ul {
+.gallery-filters-list {
 	list-style: none;
 	display: flex;
 	flex-direction: row;
@@ -255,13 +256,13 @@ nav ul li a {
 	margin: auto;
 	padding-block: 3em;	
 }
-.quote blockquote {
+.quote-text {
 	font-family: 'Spectral';	
 	font-style: italic;
 	font-weight: 300;
 	font-size: 40px;
 }
-.quote figcaption {
+.quote-author {
 	font-family: 'Spectral';
 	font-weight: 800;
 	font-size: 22px;
@@ -332,30 +333,29 @@ nav ul li a {
 .form-container {
 	flex : 2;
 }
-.form-container h2 {
+.form-title {
 	margin-top: 0px;
 	text-align: left;
 	color: #D8D3A8;
 }
-.form-container p, .form-container label {
+.form-text, .form-label {
 	font-size: 18px !important;
 	color: #D8D3A8;
-
 }
-form {
+.form-body {
 	display: flex;
 	flex-direction: column;
 	width: 70%;
 	align-items: flex-start;
 }
-form input {
+.input-box {
 	width: 100%;
 	background-color: #FFF;
 	border: solid 1px;
 	height: 2.5em;
 	margin-bottom: 20px;
 }
-form textarea {
+.text-input-box {
 	width: 100%;
 	background-color: #FFF;
 	border: solid 1px;
@@ -364,7 +364,7 @@ form textarea {
 	font-size: 1.2em;
 	margin-bottom: 20px;
 }
-input[type="submit"] {
+.form-button {
 	background-color: #BEB45A;
 	padding: .5em 1em;
 	font-size: 16px;
