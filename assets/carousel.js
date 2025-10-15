@@ -2,10 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let selectedButton, currentPhoto, currentButton, selectedPhoto;
     let carouselButton = document.querySelectorAll('.bannerCursor');
     const arrows = document.querySelectorAll('[aria-controls="carousel-viewport"]');
-    const totalSlides = document.querySelectorAll('.carousel-image').length;
-    
-    setInterval (autoAdvance, 4500);
-
+    const totalSlides = document.querySelectorAll('.carousel-image').length;    
+    setInterval (autoAdvance, 4000);
     carouselButton.forEach((button) => {
         button.addEventListener("click", () => {
             const slideIndex = button.getAttribute('data-slide');
@@ -13,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
             carouselSelector(slideIndex);
         });
     });
-
     arrows.forEach((button) => {
         button.addEventListener("click", () => {
             currentPhoto = document.querySelector(".carousel-image.current");
@@ -27,13 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 rightButton(selectedPhoto);}            
         });
     });
-
     function carouselSelector(slideIndex) {
         selectedPhoto = document.querySelector(`img[data-slide-index="${slideIndex}"]`);
         selectedButton = document.querySelector(`button[data-slide="${slideIndex}"]`);
         classAdder(selectedPhoto, selectedButton);
-    }
-    
+    }    
     function leftButton(slideIndex) {
         if (slideIndex == 0) {
             slideIndex = 2;
@@ -62,7 +57,6 @@ document.addEventListener("DOMContentLoaded", () => {
         selectedButton.classList.add("current");
         selectedButton.setAttribute('aria-current', 'true');         
     }
-
     function autoAdvance() {
         slideIndex = parseInt((document.querySelector(".carousel-image.current")).getAttribute(`data-slide-index`));
         classRemover();

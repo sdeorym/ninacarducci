@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-
     let photoCategories = [];
     let i = 0;
-    buttonCalling();
-    
+    buttonCalling();    
     function categories() { //This function creates the five categories;
         const photoGallery = document.querySelectorAll(".gallery-item");
         const gallerytags = Array.from(photoGallery).map(item =>
@@ -14,7 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 photoCategories.push(gallerytags[i]);}};
         const categorising = photoCategories.unshift('Tous');        
     }
-
     function buttonry() { //This function creates the filters that can be clicked.
         categories()
         let portfolioTitle = document.querySelector("#gallery h2");
@@ -39,13 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         };        
     }
-
     function buttonCalling() { //By this function we choose any option in the gallery menu.
         buttonry();
-
         let buttonClick = document.querySelectorAll("#gallery .gallery-filters .galleryButton");
         buttonClick[0].classList.add("active");
-
         buttonClick.forEach((button) => {
             button.addEventListener("click", () => {
                 buttonClick.forEach((button) => button.classList.remove("active"));
