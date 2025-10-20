@@ -12,7 +12,6 @@
   font-style: normal;
   font-display: swap;
 }
-
 body {
 	max-width: 1920px;
 	margin: auto;
@@ -92,7 +91,7 @@ nav ul li a {
 	/* CAROUSEL CURSOR LINES */
 	.carousel-cursors {
 		position: absolute;
-		bottom: 5rem;
+		bottom: 3rem;
 		right: 0;
 		left: 0;
 		z-index: 2;
@@ -225,16 +224,15 @@ nav ul li a {
 .gallery {
 	justify-content: center;
 	display: grid;
-	grid-template-columns: repeat(3, 424px);
-	grid-column-gap: 16px;
-	grid-row-gap: 16px;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 16px;
 	max-width: 67.5%;
 	margin: 0 auto;
 }
 .gallery-item {
 	aspect-ratio: 1 / 1;
 	width: 100%;
-	max-width: 440px;
+	max-width: 100%;
 	height: auto;
 	object-fit: cover;
 	padding: .5em;
@@ -396,6 +394,7 @@ nav ul li a {
 
 /*** MEDIA QUERIES ***/
 @media all and (max-width: 1180px) {
+	
 	.picture {
 		flex : 2;
 	}
@@ -413,7 +412,8 @@ nav ul li a {
 		margin: 0;
 	}
 	.gallery {
-		grid-template-columns: repeat(3, 304px);
+		grid-template-columns: repeat(3, 1fr);
+		max-width: 81.36%;
 	}
 	.carousel-image {
 		max-width: 1180px;
@@ -514,38 +514,54 @@ nav ul li a {
 	}
 }
 
-/*@media all and (max-width: 650px) {
-	.top-header {
-		flex-direction: column;
-		padding-inline: 0;
-	}
-	.top-header .nav, .top-header ul {
+@media all and (max-width: 651px) {
+	nav {
 		width: 100%;
-		padding: 0 0 0 0;
+		padding-inline: 15%;
+		height: auto;	
 	}
-	.top-header li {
+	nav ul {
+		width: 100%;
+		padding-bottom: 50px;
+	}
+	nav ul li {
 		flex: 1;
 		padding-block: 1em;
 		text-align: center;
+		overflow-wrap: normal;
+		vertical-align: middle;
+	}
+	nav h1 {
+		overflow-wrap: normal;
 	}
 	.picture.left::before, .picture.right::before {
 		height: 150px;
 	}
-	#services .container {
+	#about, #contact {
+		width: 100%;
+	}
+	.formbox {
+		width: 100%;
+	}
+	.picture {
+		width: 60%;
+		padding-inline: 20%;
+	}
+	#services .service-box {
 		align-items: center;
 	}
 	.service {
 		max-width: 90%;
 	}
-	#about, #contact {
-		padding-inline: 2em;
-		padding-block: 2em;
+	.gallery {
+		grid-template-columns: repeat(2, minmax(0, 1fr)); 
+		max-width: 85.5%;
 	}
-	form {
+	.gallery-item {
+		min-width: 0;   /* <- clave: permite que el elemento sea más pequeño que su contenido intrínseco */
 		width: 100%;
+		max-width: 100%;
+		box-sizing: border-box;
 	}
-	.picture {
-		width: 80%;
-	}
-}*/
+}
 
