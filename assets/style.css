@@ -392,6 +392,32 @@ nav ul li a {
 	font-size: 16px;
 }
 
+/*** SNIPPET PREVIEW ***/
+	.snippet-preview {
+		max-width: 600px;
+		border: 1px solid #ddd;
+		border-radius: 8px;
+		padding: 1rem;
+		font-family: inter, sans-serif;
+		background-color: #fff;
+		box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+		line-height: 1.5;
+		margin-top: 2.5rem;
+	}
+	.snippet-title {
+		font-size: 1.25rem;
+		margin-bottom: 0.25rem;
+	}
+	.snippet-url {
+		font-size: 0.9rem;
+		color: #1a0dab;
+		margin-bottom: 0.5rem;
+	}
+	.snippet-description {
+		font-size: 1rem;
+		color: #5F5A2D;
+	}
+
 /*** MEDIA QUERIES ***/
 @media all and (max-width: 1180px) {
 	

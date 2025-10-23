@@ -6,9 +6,9 @@
 			content="Page de la photographe de Bordeaux Nina Carducci. Ses photos, ses tariffs, un formulaire pour la contacter.">
 		<link rel="preload" href="./assets/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 		<link rel="preload" href="assets/fonts/Spectral.woff" as="font" type="font/woff" crossorigin>
-		<link rel="stylesheet" href="./assets/style.css">
+		<link rel="stylesheet" href="./assets/style.min.css">
 		<meta charset="UTF-8">
-		<title>Nina Carducci photographe à Bordeaux</title>
+		<title>Nina Carducci -- photographe à Bordeaux</title>
 
 		<!-- Open Graph -->
 			<meta property="og:site_name" content="Nina Carducci photographe à Bordeaux" />
@@ -24,6 +24,25 @@
 			<meta name="twitter:description" content="Découvrez mes photographies, mon portfolio !" />
 			<meta name="twitter:image" content="http://127.0.0.1:5500/assets/images/camera.avif" />
 			<meta name="twitter:url" content="http://127.0.0.1:5500/" />
+		<!-- SCHEMA.ORG -->
+			<script type="application/ld+json">
+				{
+				"@context": "https://schema.org",
+				"@type": "ProfessionalService",
+				"name": "Nina Carducci — photographe à Bordeaux",
+				"image": "http://127.0.0.1:5500/assets/images/camera.avif",
+				"url": "http://127.0.0.1:5500/index.html",
+				"telephone": "05-56-67-78-89",
+				"address": {
+					"@type": "PostalAddress",
+					"streetAddress": "68 avenue Alsace-Lorraine",
+					"postalCode": "33200",
+					"addressLocality": "Bordeaux",
+					"addressCountry": "FR"
+				},
+				"openingHours": "Mo-Fr 10:00-19:00"
+				}
+			</script>
 	</head>
 	<body>
 		<nav>
@@ -36,7 +55,7 @@
 				<li><a class="social-link" href="https://www.instagram.com/ninacarducci.photo/?hl=fr" target="_blank"><img src="assets/images/instagram.png" alt="Logo d'instagram"></a></li>
 			</ul>
 		</nav>
-		<section id="main-banner" class="carousel" role="region" aria-label="Galerie d’images">
+		<section id="main-banner" class="carousel" aria-label="Galerie d’images">
 			<div class="carousel-cursors">
 				<button data-slide="0" class="bannerCursor current" aria-current="true" aria-label="Slide 1"></button>
 				<button data-slide="1" class="bannerCursor" aria-label="Slide 2"></button>
@@ -73,18 +92,18 @@
 		</section>
 		<section id="gallery">
 			<h2>Portfolio</h2>
-			<div class="gallery" role="list" aria-live="polite">
-				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.avif" role="listitem" alt="Concert"/>
-				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.avif" role="listitem" alt="Portrait de Ali Morshedlou"/>
-				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.avif" role="listitem" alt="Photo d'entreprise : chez Jason Goodman"/>
-				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.avif" role="listitem" alt="Les mains des fiancés, noce de Hannah Busing."/>
-				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.avif" role="listitem" alt="Portrait d'Ade Tunji."/>
-				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.avif" role="listitem" alt="Noce de Jakob Owens, un instant de pure joie."/>
-				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.avif" role="listitem" alt="Portrait de jeune femme."/>
-				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.avif" role="listitem" alt="Concert de Austun Neill"/>
-				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.avif" role="listitem" alt="Portrait chez l'entreprise de Mateus Campos Felipe"/>
+			<div class="gallery" aria-live="polite">
+				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/aaron-paul-wnX-fXzB6Cw-unsplash.avif" alt="Concert"/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/ali-morshedlou-WMD64tMfc4k-unsplash.avif" alt="Portrait de Ali Morshedlou"/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/jason-goodman-tHO1_OuKbg0-unsplash.avif" alt="Photo d'entreprise : chez Jason Goodman"/>
+				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/hannah-busing-RvF2R_qMpRk-unsplash.avif" alt="Les mains des fiancés, noce de Hannah Busing."/>
+				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/ade-tunji-rVkhWWZFAtQ-unsplash.avif" alt="Portrait d'Ade Tunji."/>
+				<img data-gallery-tag="Mariages" class="gallery-item" src="./assets/images/gallery/mariage/jakob-owens-SiniLJkXhMc-unsplash.avif" alt="Noce de Jakob Owens, un instant de pure joie."/>
+				<img data-gallery-tag="Portrait" class="gallery-item" src="./assets/images/gallery/portraits/nino-van-prattenburg--443cl1uR_8-unsplash.avif" alt="Portrait de jeune femme."/>
+				<img data-gallery-tag="Concert" class="gallery-item" src="./assets/images/gallery/concerts/austin-neill-hgO1wFPXl3I-unsplash.avif" alt="Concert de Austun Neill"/>
+				<img data-gallery-tag="Entreprises" class="gallery-item" src="./assets/images/gallery/entreprise/mateus-campos-felipe-Fsgzm8N0hIY-unsplash.avif" alt="Portrait chez l'entreprise de Mateus Campos Felipe"/>
 			</div>
-			<div class="quote" aria-label="Citation de Richard Avedon sur la photographie">
+			<div class="quote">
 				<figure>
 					<blockquote class="quote-text">
 						Un portrait n’est pas une ressemblance. Dès lors qu’une émotion ou qu’un fait est traduit en photo, il cesse d’être un fait pour devenir une opinion. L’inexactitude n’existe pas en photographie. Toutes les photos sont exactes. Aucune d’elles n’est la vérité.
@@ -128,7 +147,7 @@
 				</article>
 			</div>
 		</section>
-		<section class="quote" aria-label="Citation de Richard Avedon sur la photographie">
+		<section class="quote">
 			<figure>
 				<blockquote class="quote-text">
 					De manière inconsciente, je crois, je guette un regard, une expression, des traits ou une nostalgie capable de résumer ou plus exactement de révéler une vie
@@ -141,7 +160,7 @@
 				<div class="form-container">
 					<h2 class="form-title">Une question ? Une demande de devis ?</h2>
 					<p class="form-text">N’hésitez pas à m’écrire ! Je vous répondrais en moins de 24 heures</p>
-					<form action="" method="post" class="form-body">
+					<form method="post" class="form-body">
 						<label id="label-nom" for="nom" class="form-label">Nom</label>
 						<input type="text" name="nom" id="nom" aria-labelledby="label-nom" class="input-box">
 						<label id="label-email" for="email" class="form-label">Email</label>
@@ -153,10 +172,19 @@
 				</div>
 				<div class="picture right">
 					<img src="./assets/images/camera.avif" class="contact-photo" alt="Camera photographique reflex, l'outil de l'artiste.">
-				</div>
+				</div>				
+			</div>
+			<div class="snippet-preview" role="region" aria-label="Aperçu du résultat Google">
+				<h3 class="snippet-title">Nina Carducci — photographe à Bordeaux</h3>
+				<p class="snippet-url">https://ninacarducci.fr</p>
+				<p class="snippet-description">
+					📍 68 avenue Alsace-Lorraine, 33200 Bordeaux<br>
+					📞 05-56-67-78-89<br>
+					🕒 Lundi–Vendredi : 10:00–19:00
+				</p>
 			</div>
 		</section>
-		<script src="./assets/carousel.js" defer></script>
-		<script src="./assets/gallery.js" defer></script>	
+		<script src="./assets/carousel.min.js" defer></script>
+		<script src="./assets/gallery.min.js" defer></script>	
 	</body>	
 </html>
