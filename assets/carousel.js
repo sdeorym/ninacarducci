@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
     function carouselSelector(slideIndex) {
-        selectedPhoto = document.querySelector(`img[data-slide-index="${slideIndex}"]`);
+        selectedPhoto = document.querySelector(`picture[data-slide-index="${slideIndex}"]`);
         selectedButton = document.querySelector(`button[data-slide="${slideIndex}"]`);
         classAdder(selectedPhoto, selectedButton);
     }    

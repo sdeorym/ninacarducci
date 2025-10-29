@@ -115,31 +115,31 @@ nav ul li a {
 		opacity: 1;
 	}
 	/* CAROUSEL IMAGES */
-	.carousel-viewport {
+	#carousel-viewport {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		position: relative;
 		width: 100%;
 		height: auto;
-		overflow: hidden;
+		overflow: hidden;		
 	}
 	.carousel-image {
-		max-width: 1920px;
+		max-width: 100%;
 		flex: 0 0 auto;
 		display: none;
+		aspect-ratio: 2.16 / 1;
 		transition: opacity 0.6s ease-in-out;
+	}
+	.carousel-image.current {
+		display: block;
 	}
 	.carousel-image img {
 		max-width: 100%;
 		height: auto;
 		display: block;
-		margin:auto;
-		aspect-ratio: 2.16 / 1;
 	}
-	.carousel-image.current {
-		display: block;
-	}
+
 	/* CAROUSEL ARROW BUTTONS*/
 	.arrow-buttons {
 		position: absolute;
@@ -197,15 +197,19 @@ nav ul li a {
 .self-portrait {
 	width: 100%;
   	height: auto;
-  	max-width: 573px; 
+  	max-width: 573px;
+	margin-top: 60px; 
 }
 #about-text {
 	flex: 2;
+	margin-top: 15em;
 }
 .about-title {
-	text-align: left;
-	padding: 0px;
-	margin: 30px 0px 60px;
+	top: 0;
+	position: absolute;
+	padding-inline: 35vw;
+    line-height: 1.2;
+	font-size: 30px;
 }
 .introduction {
 	font-family: 'Spectral', serif;
@@ -265,7 +269,7 @@ nav ul li a {
 
 /***** QUOTES *****/
 .quote {	
-	width: 78.34%;
+	width: 70%;
 	margin: auto;
 	padding-block: 2em;
   	min-height: 200px;	
@@ -325,72 +329,85 @@ nav ul li a {
 }
 
 /***** CONTACT *****/
-#contact {
-	margin: auto;
-	background-color: #5F5A2D ;
-	position: relative;
-	padding-inline: 100px;
-	padding-block: 100px;
-}
-.formbox {
-	display: flex;
-	align-items: center;
-}
-.picture.right::before {
-	content: ' ';
-	background-color: #D8D3A8;
-	width: 374px;
-	height: 329px;
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	z-index: -1;
-}
-.contact-photo {
-	width: 100%;
-	height: auto;
-	aspect-ratio: 1 / 1;
-	display: block;
-}
-.form-container {
-	flex : 2;
-}
-.form-title {
-	margin-top: 0px;
-	text-align: left;
-	color: #D8D3A8;
-}
-.form-text, .form-label {
-	font-size: 18px !important;
-	color: #D8D3A8;
-}
-.form-body {
-	display: flex;
-	flex-direction: column;
-	width: 70%;
-	align-items: flex-start;
-}
-.input-box {
-	width: 100%;
-	background-color: #FFF;
-	border: solid 1px;
-	height: 2.5em;
-	margin-bottom: 20px;
-}
-.text-input-box {
-	width: 100%;
-	background-color: #FFF;
-	border: solid 1px;
-	height: 5em;
-	line-height: 2.5em;
-	font-size: 1.2em;
-	margin-bottom: 20px;
-}
-.form-button {
-	background-color: #BEB45A;
-	padding: .5em 1em;
-	font-size: 16px;
-}
+	#contact {
+		margin: auto;
+		background-color: #5F5A2D ;
+		position: relative;
+		padding-inline: 150px;
+		padding-block: 100px;
+		display: flex;
+		align-items: center;	
+	}
+	.form-title {
+		top: 0;
+		position: absolute;
+		padding-inline: 30vw;
+		line-height: 1.2;
+		font-size: 30px;
+		margin-top: 0px;
+		text-align: center;
+		color: #D8D3A8;
+	}
+	.form-text {
+		top: 5em;
+		position: absolute;
+		padding-inline: 30vw;
+		text-align: center;
+		font-size: 18px !important;
+		color: #D8D3A8;
+		margin: 1em 0 10px;
+	}
+	.picture.right::before {
+		content: ' ';
+		background-color: #D8D3A8;
+		width: 374px;
+		height: 329px;
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: -1;
+	}
+	.contact-photo {
+		width: 100%;
+		height: auto;
+		aspect-ratio: 1 / 1;
+		display: block;
+		margin-top: 50px;
+	}
+	.form-body label {
+		font-size: 18px !important;
+		color: #D8D3A8;
+	}
+	.form-body {
+		display: flex;
+		flex-direction: column;
+		width: 70%;
+		align-items: flex-start;
+		flex : 2;
+		margin-top: 50px;
+		padding-inline: 15%;
+	}
+	.input-box {
+		width: 100%;
+		background-color: #FFF;
+		border: solid 1px;
+		height: 2.5em;
+		margin-bottom: 20px;
+	}
+	.text-input-box {
+		width: 100%;
+		background-color: #FFF;
+		border: solid 1px;
+		height: 5em;
+		line-height: 2.5em;
+		font-size: 1.2em;
+		margin-bottom: 20px;
+	}
+	.form-button {
+		background-color: #BEB45A;
+		padding: .5em 1em;
+		font-size: 16px;
+	}
 
 /*** SNIPPET PREVIEW ***/
 	.snippet-preview {
@@ -403,6 +420,8 @@ nav ul li a {
 		box-shadow: 0 2px 6px rgba(0,0,0,0.05);
 		line-height: 1.5;
 		margin-top: 2.5rem;
+		align-self: center;
+		margin-inline: auto;
 	}
 	.snippet-title {
 		font-size: 1.25rem;
@@ -430,6 +449,9 @@ nav ul li a {
 	.about-title {
 		margin: 0 0 1em 0;
 	}
+	#about-text {
+		margin-top: 2.5em;
+	}
 	.introduction {
 		max-width: 100%;
 	}
@@ -444,16 +466,36 @@ nav ul li a {
 	.carousel-image {
 		max-width: 1180px;
 	}
+	.form-title, .form-text {
+		padding-inline: 10vw;
+	}
+	.form-body {
+		padding-inline: 2.5%;
+	}
 }
 
 @media all and (max-width: 1000px) {
-	#about {
+	#about, #contact {
 		flex-direction: column;
-		max-width: 80%;
 		align-items: center;
+		padding-inline: 50px;
+		flex-wrap: wrap;
+	}
+	.about-title {
+		z-index: 1;
+		text-align: center;
+		margin: .5em 0;
+		padding-inline: 30vw;
 	}
 	.picture {
-		width: 50%;
+		width: 40%;
+		margin: 60px auto 30px;
+		display: block;
+	}
+	.self-portrait img, .contact-photo img {
+		width: 100%;
+		height: auto;
+		display: block;
 	}
 	.picture.left::before {
 		width: 100%;
@@ -463,15 +505,7 @@ nav ul li a {
 	}
 	#about-text {
 		flex: none;
-	}
-	.about-title {
-		text-align: center;
-		margin-top: 1em;
-	}
-	#about-text {
-		flex: none;
-		width: 100%;
-		margin: 0 auto;
+		margin: 0 10%;
 	}
 	.carousel-image {
 		max-width: 1000px;
@@ -514,17 +548,8 @@ nav ul li a {
 		left: auto;
 		z-index: 0;
 	}
-	#contact {
-		max-width: 80%;
-		align-items: center;
-		padding-block: 0px;
-	}
 	.formbox {
 		flex-direction: column;
-	}
-	.form-container {
-		padding-inline: 50px;
-		flex-wrap: wrap;
 	}
 	#contact .picture.right {
 		margin-top: 1em;
@@ -570,7 +595,7 @@ nav ul li a {
 		width: 100%;
 	}
 	.picture {
-		width: 60%;
+		width: 33%;
 		padding-inline: 20%;
 	}
 	#services .service-box {
@@ -590,4 +615,3 @@ nav ul li a {
 		box-sizing: border-box;
 	}
 }
-
