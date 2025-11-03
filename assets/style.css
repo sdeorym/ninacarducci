@@ -355,7 +355,7 @@ nav ul li a {
 		text-align: center;
 		font-size: 18px !important;
 		color: #D8D3A8;
-		margin: 1em 0 10px;
+		margin-block: 2rem;
 	}
 	.picture.right::before {
 		content: ' ';
